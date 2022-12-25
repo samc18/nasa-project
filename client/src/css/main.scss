@@ -1,0 +1,117 @@
+@import 'config';
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: #7efcf6;
+    background: url(../assets/img/background-large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-layout {
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+}
+
+.app-layout * {
+    grid-column: 2 / 3;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0;
+
+    &__list {
+        display: flex;
+        gap: 2em;
+        list-style: none;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        text-decoration: underline;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.launch {
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__form {
+        margin-top: 10px;
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    &__form label {
+        grid-column: 1 / 2;
+    }
+    &__form button {
+        grid-column: 1 / 2;
+        color: #00ff00;
+        background-color: rgb(0, 255, 0, .3);
+        border: none;
+        cursor: pointer;
+        padding: 0.4em 1em;
+    }
+
+    &__form button:hover,
+    &__form button:focus {
+        background-color: rgb(0, 255, 0, .5);
+    }
+}
+
+.upcoming {
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__table {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__btn {
+        background: none;
+        color: orangered;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__btn:hover,
+    &__btn:focus {
+        color: red;
+    }
+}
+
+.history {
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__table {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 4em;
+}
